@@ -37,3 +37,24 @@ def play(songs)
   end 
 end
 
+def list(songs)
+  songs.each_with_index do |data, i|
+  puts "#{i + 1}. #{data}"
+  end 
+end  
+
+def exit_jukebox
+  puts "Goodbye"
+end
+
+def run(songs) 
+  help 
+  puts "Please enter a command:"
+  res = gets.downcase.strip
+  if res == "play"
+    play(songs)
+  end
+  if res == "exit"
+    exit_jukebox
+  end
+end
