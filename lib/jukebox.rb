@@ -27,14 +27,12 @@ def play(songs)
   a_response = nil 
   songs.each_with_index do |song, index|
       if song.include?(pick) 
-      a_response = "Playing #{song}"
-      elsif songs[pick.to_i] == song
-      a_response = "Playing #{song}"
-      else
-      a_response = "Invalid input, please try again"
-
-     end
+        a_response = "Playing #{song}"
+        elsif songs[pick.to_i] == song
+        a_response = "Playing #{song}"
+        else
+        a_response = "Invalid input, please try again"
+      end
     puts a_response
   end 
-
- end
+end
